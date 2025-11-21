@@ -13,6 +13,10 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['Poppins', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -64,6 +68,14 @@ export default {
           "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
+        },
+        loop: {
+          violet: "hsl(259, 66%, 21%)",
+          indigo: "hsl(245, 89%, 82%)",
+          jordy: "hsl(212, 99%, 77%)",
+          lavender: "hsl(231, 72%, 93%)",
+          mauve: "hsl(288, 71%, 88%)",
+          thistle: "hsl(293, 69%, 87%)",
         },
       },
       borderRadius: {
