@@ -8,26 +8,31 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 210 20% 98%;
-    --foreground: 216 19% 16%;
+    /* Loop Brand Colors - Light Mode */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 11%;
 
     --card: 0 0% 100%;
-    --card-foreground: 216 19% 16%;
+    --card-foreground: 0 0% 11%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 216 19% 16%;
+    --popover-foreground: 0 0% 11%;
 
-    --primary: 214 95% 36%;
+    /* Russian Violet - Primary Brand Color */
+    --primary: 259 66% 21%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 15% 94%;
-    --secondary-foreground: 216 19% 16%;
+    /* Lavender - Secondary */
+    --secondary: 231 72% 93%;
+    --secondary-foreground: 259 66% 21%;
 
-    --muted: 210 15% 94%;
-    --muted-foreground: 215 16% 47%;
+    /* Tropical Indigo - Muted */
+    --muted: 245 89% 82%;
+    --muted-foreground: 259 66% 21%;
 
-    --accent: 210 15% 94%;
-    --accent-foreground: 216 19% 16%;
+    /* Jordy Blue - Accent */
+    --accent: 212 99% 77%;
+    --accent-foreground: 259 66% 21%;
 
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
@@ -38,50 +43,49 @@ All colors MUST be HSL.
     --success: 142 71% 45%;
     --success-foreground: 0 0% 100%;
 
-    --border: 214 20% 88%;
-    --input: 214 20% 88%;
-    --ring: 214 95% 36%;
+    /* Mauve - Borders */
+    --border: 288 71% 88%;
+    --input: 288 71% 88%;
+    --ring: 259 66% 21%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar using brand colors */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 259 66% 21%;
+    --sidebar-primary: 259 66% 21%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 231 72% 93%;
+    --sidebar-accent-foreground: 259 66% 21%;
+    --sidebar-border: 288 71% 88%;
+    --sidebar-ring: 212 99% 77%;
   }
 
   .dark {
-    --background: 216 28% 7%;
-    --foreground: 210 20% 98%;
+    /* Loop Brand Colors - Dark Mode */
+    --background: 0 0% 11%;
+    --foreground: 0 0% 100%;
 
-    --card: 216 24% 10%;
-    --card-foreground: 210 20% 98%;
+    --card: 259 66% 15%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 216 24% 10%;
-    --popover-foreground: 210 20% 98%;
+    --popover: 259 66% 15%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 214 95% 50%;
-    --primary-foreground: 0 0% 100%;
+    /* Russian Violet - lighter for dark mode */
+    --primary: 245 89% 82%;
+    --primary-foreground: 259 66% 21%;
 
-    --secondary: 216 20% 15%;
-    --secondary-foreground: 210 20% 98%;
+    /* Darker secondary for dark mode */
+    --secondary: 259 66% 21%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 216 20% 15%;
-    --muted-foreground: 215 16% 65%;
+    --muted: 259 55% 25%;
+    --muted-foreground: 245 89% 82%;
 
-    --accent: 216 20% 15%;
-    --accent-foreground: 210 20% 98%;
+    /* Jordy Blue - Accent */
+    --accent: 212 99% 77%;
+    --accent-foreground: 259 66% 21%;
 
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
@@ -92,17 +96,18 @@ All colors MUST be HSL.
     --success: 142 71% 45%;
     --success-foreground: 0 0% 100%;
 
-    --border: 216 20% 18%;
-    --input: 216 20% 18%;
-    --ring: 214 95% 50%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 259 55% 25%;
+    --input: 259 55% 25%;
+    --ring: 245 89% 82%;
+
+    --sidebar-background: 259 66% 21%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 245 89% 82%;
+    --sidebar-primary-foreground: 259 66% 21%;
+    --sidebar-accent: 259 55% 25%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 259 55% 25%;
+    --sidebar-ring: 212 99% 77%;
   }
 }
 
@@ -113,5 +118,10 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
   }
 }
