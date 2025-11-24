@@ -67,8 +67,6 @@ export const generateValidationMessages = (): ValidationMessage[] => {
   return messages;
 };
 
-export const validationMessages = generateValidationMessages();
-
 export const pressureInjuriesData: QuestionData[] = [
   {
     code: 'PI-01',
@@ -278,3 +276,5 @@ export const indicatorDataMap: Record<string, QuestionData[]> = {
   EN: enrolledNursingData,
   LO: lifestyleOfficersData,
 };
+
+export const validationMessages = generateValidationMessages();
