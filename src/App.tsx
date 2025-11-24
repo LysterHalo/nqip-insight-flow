@@ -7,6 +7,7 @@ import Dashboard from "./pages/Dashboard";
 import ValidationPanel from "./pages/ValidationPanel";
 import IndicatorDetails from "./pages/IndicatorDetails";
 import SubmissionConfirmation from "./pages/SubmissionConfirmation";
+import SummaryDashboard from "./pages/SummaryDashboard";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/validation" element={<ValidationPanel />} />
           <Route path="/indicator/:id" element={<IndicatorDetails />} />
           <Route path="/submission" element={<SubmissionConfirmation />} />
+          <Route path="/dashboard" element={<SummaryDashboard />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

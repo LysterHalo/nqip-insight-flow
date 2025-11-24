@@ -52,6 +52,13 @@ const Dashboard = () => {
 
         <div className="flex justify-center gap-4">
           <Button 
+            onClick={() => navigate('/dashboard')}
+            size="lg"
+            className="px-8"
+          >
+            Go To Dashboard
+          </Button>
+          <Button 
             onClick={() => window.open('https://prod-apsoutheast-a.online.tableau.com/#/site/rockpool/views/NQIPQuarterlyReport/Falls?:iid=1', '_blank')}
             size="lg"
             className="px-8"
