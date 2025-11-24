@@ -1,11 +1,18 @@
 import { PageHeader } from "@/components/PageHeader";
 import { IndicatorCard } from "@/components/IndicatorCard";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { indicators } from "@/data/mockData";
 import { useNavigate } from "react-router-dom";
+import { toast } from "sonner";
 
 const Dashboard = () => {
   const navigate = useNavigate();
+
+  const handleSubmitInProgress = () => {
+    toast.success("Submitted to Government with 'In Progress' status");
+    navigate('/submission');
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -25,6 +32,23 @@ const Dashboard = () => {
             ))}
           </div>
         </div>
+
+        <Card className="mb-8">
+          <CardHeader>
+            <CardTitle>Submission</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <p className="text-sm text-muted-foreground">
+              I attest that the information provided in this submission is accurate and complete to the best of my knowledge, 
+              and has been reviewed according to the National Quality Indicator Program requirements.
+            </p>
+            <div className="flex justify-center">
+              <Button onClick={handleSubmitInProgress} size="lg">
+                Submit to Government — In Progress
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
 
         <div className="flex justify-center">
           <Button 
