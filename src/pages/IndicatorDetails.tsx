@@ -122,6 +122,25 @@ const IndicatorDetails = () => {
           </CardContent>
         </Card>
 
+        <Card className="mb-8">
+          <CardHeader>
+            <CardTitle>Reviewer Actions</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Button variant="outline" onClick={handleEditData}>
+                Edit Data
+              </Button>
+              <Button variant="outline" onClick={handleAcknowledgeWarnings}>
+                Acknowledge Warnings
+              </Button>
+              <Button onClick={handleSaveDraft}>
+                Save Draft
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
+
         <div className="flex gap-4 justify-center mt-8">
           <Button variant="outline" onClick={() => navigate('/')}>
             Back to Overview Page
