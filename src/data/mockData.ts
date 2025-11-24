@@ -22,20 +22,20 @@ export interface QuestionData {
 }
 
 export const indicators: Indicator[] = [
-  { id: 'PI', name: 'Pressure Injuries', completeness: 90, warnings: 2, errors: 1 },
-  { id: 'RP', name: 'Restrictive Practices', completeness: 100, warnings: 1, errors: 1 },
-  { id: 'UWL', name: 'Unplanned Weight Loss', completeness: 85, warnings: 1, errors: 1 },
-  { id: 'FMI', name: 'Falls & Major Injury', completeness: 95, warnings: 0, errors: 0 },
-  { id: 'MM', name: 'Medication Management', completeness: 92, warnings: 1, errors: 0 },
-  { id: 'ADL', name: 'Activities of Daily Living', completeness: 88, warnings: 2, errors: 1 },
-  { id: 'IC', name: 'Incontinence Care', completeness: 94, warnings: 0, errors: 0 },
-  { id: 'HOSP', name: 'Hospitalisation', completeness: 97, warnings: 1, errors: 0 },
+  { id: 'PI', name: 'Pressure Injuries', completeness: 90, warnings: 1, errors: 1 },
+  { id: 'RP', name: 'Restrictive Practices', completeness: 88, warnings: 1, errors: 1 },
+  { id: 'UWL', name: 'Unplanned Weight Loss', completeness: 100, warnings: 1, errors: 0 },
+  { id: 'FMI', name: 'Falls & Major Injury', completeness: 100, warnings: 0, errors: 0 },
+  { id: 'MM', name: 'Medication Management', completeness: 100, warnings: 0, errors: 0 },
+  { id: 'ADL', name: 'Activities of Daily Living', completeness: 88, warnings: 0, errors: 1 },
+  { id: 'IC', name: 'Incontinence Care', completeness: 100, warnings: 0, errors: 0 },
+  { id: 'HOSP', name: 'Hospitalisation', completeness: 100, warnings: 1, errors: 0 },
   { id: 'WF', name: 'Workforce', completeness: 100, warnings: 0, errors: 0 },
-  { id: 'CE', name: 'Consumer Experience', completeness: 91, warnings: 1, errors: 1 },
-  { id: 'QOL', name: 'Quality of Life', completeness: 89, warnings: 2, errors: 0 },
-  { id: 'AH', name: 'Allied Health', completeness: 93, warnings: 0, errors: 0 },
-  { id: 'EN', name: 'Enrolled Nursing', completeness: 96, warnings: 1, errors: 0 },
-  { id: 'LO', name: 'Lifestyle Officers', completeness: 98, warnings: 0, errors: 0 },
+  { id: 'CE', name: 'Consumer Experience', completeness: 86, warnings: 0, errors: 1 },
+  { id: 'QOL', name: 'Quality of Life', completeness: 100, warnings: 2, errors: 0 },
+  { id: 'AH', name: 'Allied Health', completeness: 100, warnings: 0, errors: 0 },
+  { id: 'EN', name: 'Enrolled Nursing', completeness: 100, warnings: 1, errors: 0 },
+  { id: 'LO', name: 'Lifestyle Officers', completeness: 100, warnings: 0, errors: 0 },
 ];
 
 export const validationMessages: ValidationMessage[] = [
