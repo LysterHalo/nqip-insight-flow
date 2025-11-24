@@ -10,7 +10,7 @@ interface ValidationItemProps {
 
 export const ValidationItem = ({ type, code, message, indicatorId }: ValidationItemProps) => {
   return (
-    <Link to={`/indicator/${indicatorId}`}>
+    <Link to={`/indicator/${indicatorId}#${code}`}>
       <div className="flex items-start gap-3 p-4 rounded-lg border border-border hover:bg-accent transition-colors cursor-pointer">
         {type === 'error' ? (
           <XCircle className="h-5 w-5 text-destructive flex-shrink-0 mt-0.5" />
@@ -21,7 +21,7 @@ export const ValidationItem = ({ type, code, message, indicatorId }: ValidationI
           <p className="text-sm font-medium text-foreground">
             {type === 'error' ? 'Error' : 'Warning'}: {message}
           </p>
-          <p className="text-xs text-muted-foreground mt-1">Code: {code}</p>
+          <p className="text-xs text-muted-foreground mt-1">Code: {code} • Click to view in detail</p>
         </div>
       </div>
     </Link>

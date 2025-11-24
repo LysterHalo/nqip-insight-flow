@@ -125,3 +125,22 @@ All colors MUST be HSL.
     font-family: 'Poppins', sans-serif;
   }
 }
+
+/* Highlight animation for table rows */
+@keyframes highlight {
+  0%, 100% { background-color: transparent; }
+  50% { background-color: hsl(231 72% 93% / 0.5); }
+}
+
+.dark .highlight-row {
+  animation: highlight-dark 0.8s ease-in-out 3;
+}
+
+@keyframes highlight-dark {
+  0%, 100% { background-color: transparent; }
+  50% { background-color: hsl(245 89% 82% / 0.2); }
+}
+
+.highlight-row {
+  animation: highlight 0.8s ease-in-out 3;
+}
