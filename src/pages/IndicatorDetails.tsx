@@ -122,47 +122,12 @@ const IndicatorDetails = () => {
           </CardContent>
         </Card>
 
-        <Card className="mb-8">
-          <CardHeader>
-            <CardTitle>Reviewer Actions</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="flex flex-wrap gap-3">
-              <Button variant="outline" onClick={handleEditData}>
-                Edit Data
-              </Button>
-              <Button variant="outline" onClick={handleAcknowledgeWarnings}>
-                Acknowledge Warnings
-              </Button>
-              <Button variant="secondary" onClick={handleSaveDraft}>
-                Save Draft
-              </Button>
-            </div>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardHeader>
-            <CardTitle>Submission</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="flex flex-wrap gap-3">
-              <Button onClick={handleSubmitInProgress} size="lg">
-                Submit to Government — In Progress
-              </Button>
-              <Button variant="outline" onClick={handleFinalSubmit} size="lg">
-                Final Submit — Status: Submitted
-              </Button>
-            </div>
-            <p className="text-xs text-muted-foreground mt-4">
-              * Attestation Message (auto from API doc)
-            </p>
-          </CardContent>
-        </Card>
-
-        <div className="mt-8">
+        <div className="flex gap-4 justify-center mt-8">
           <Button variant="outline" onClick={() => navigate('/')}>
-            Back to Dashboard
+            Back to Overview Page
+          </Button>
+          <Button variant="outline" onClick={() => navigate('/validation')}>
+            Back to Validation Panel
           </Button>
         </div>
       </main>

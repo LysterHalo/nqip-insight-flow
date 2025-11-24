@@ -47,10 +47,7 @@ const ValidationPanel = () => {
 
         <div className="flex gap-4 justify-center mt-8">
           <Button variant="outline" onClick={() => navigate('/')}>
-            Back to Indicators
-          </Button>
-          <Button onClick={() => navigate('/indicator/PI')}>
-            Continue to Indicator Details
+            Back to Overview Page
           </Button>
         </div>
       </main>
