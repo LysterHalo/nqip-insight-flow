@@ -9,9 +9,9 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { pressureInjuriesData, indicators } from "@/data/mockData";
+import { indicators, indicatorDataMap } from "@/data/mockData";
 import { useNavigate, useParams } from "react-router-dom";
-import { Check, XCircle } from "lucide-react";
+import { Check, XCircle, AlertTriangle } from "lucide-react";
 import { toast } from "sonner";
 
 const IndicatorDetails = () => {
@@ -19,7 +19,8 @@ const IndicatorDetails = () => {
   const { id } = useParams();
   
   const indicator = indicators.find(i => i.id === id);
-  const indicatorName = indicator?.name || "Pressure Injuries";
+  const indicatorName = indicator?.name || "Indicator";
+  const questionData = id && indicatorDataMap[id] ? indicatorDataMap[id] : [];
 
   const handleEditData = () => {
     toast.info("Edit mode would open here");
@@ -66,9 +67,9 @@ const IndicatorDetails = () => {
                     <TableHead className="w-[150px]">Answer</TableHead>
                     <TableHead className="w-[150px]">Validation</TableHead>
                   </TableRow>
-                </TableHeader>
-                <TableBody>
-                  {pressureInjuriesData.map((row) => (
+            </TableHeader>
+            <TableBody>
+              {questionData.map((row) => (
                     <TableRow key={row.code}>
                       <TableCell className="font-medium">{row.code}</TableCell>
                       <TableCell>{row.question}</TableCell>
@@ -85,23 +86,20 @@ const IndicatorDetails = () => {
                             <Check className="h-4 w-4" />
                             <span>Valid</span>
                           </div>
+                        ) : row.validation === 'warning' ? (
+                          <div className="flex items-center gap-2 text-warning">
+                            <AlertTriangle className="h-4 w-4" />
+                            <span>Warning</span>
+                          </div>
                         ) : (
                           <div className="flex items-center gap-2 text-destructive">
                             <XCircle className="h-4 w-4" />
-                            <span>Missing</span>
+                            <span>Error</span>
                           </div>
                         )}
                       </TableCell>
                     </TableRow>
                   ))}
-                  <TableRow>
-                    <TableCell className="font-medium text-muted-foreground">...</TableCell>
-                    <TableCell className="text-muted-foreground">
-                      (all sub-questions PI-07 ... PI-18)
-                    </TableCell>
-                    <TableCell></TableCell>
-                    <TableCell></TableCell>
-                  </TableRow>
                 </TableBody>
               </Table>
             </div>
